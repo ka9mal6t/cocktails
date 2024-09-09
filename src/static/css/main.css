@@ -1,0 +1,369 @@
+@import './reset.css';
+@import './header.css';
+@import './footer.css';
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.blur-circle {
+  background: radial-gradient(circle, rgba(254, 236, 172, 0.4) 0%, rgba(254, 236, 172, 0.4) 50%, rgba(254, 236, 172, 0.4) 50%, rgba(254, 236, 172, 0.4) 100%);
+  border-radius: 50%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 1;
+}
+
+.blur-white-circle {
+  background: #d7cfc9;
+  border-radius: 50%;
+  filter: blur(30px);
+  position: absolute;
+  z-index: 2;
+}
+
+body, html {
+  background-color: #181818;
+  box-sizing: content-box;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  font-family: "Inknut Antiqua", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  overflow-x: hidden;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: visible;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-board {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 50%;
+}
+.overlay-board div {
+  color: #FFF4D1;
+  line-height: 140%;
+  font-size: 54px;
+  margin-bottom: 30px;
+}
+.overlay-board button {
+  position: relative;
+  z-index: 5;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 20px;
+  opacity: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+.overlay-board button:first-of-type {
+  background-color: #FEECAC;
+  margin-right: 20px;
+}
+.overlay-board button:nth-last-of-type(1) {
+  border: 2px solid #FFF4D1;
+  color: #FFF4D1;
+}
+
+.cocktails {
+  position: relative;
+  margin: 110px 80px 0 80px;
+  z-index: 3;
+}
+.cocktails__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.cocktails__title span {
+  font-size: 32px;
+  color: #FFF4D1;
+  font-weight: 600;
+}
+.cocktails__title a {
+  position: relative;
+  z-index: 5;
+  color: #FFB36A;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 20px;
+}
+.cocktails__title a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFB36A;
+}
+.cocktails__items {
+  display: flex;
+  justify-content: space-between;
+}
+.cocktails__item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 33px;
+}
+.cocktails__item.popular {
+  border: 5px solid #FEECAC;
+  border-radius: 10px;
+}
+.cocktails__item div {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: visible;
+}
+.cocktails__item div img {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.cocktails__item div .overlay-likes {
+  position: absolute;
+  top: 0%;
+  right: calc(-83% + 10px);
+  display: flex;
+  align-items: end;
+  padding-top: 5px;
+}
+.cocktails__item div .overlay-likes span {
+  position: relative;
+  z-index: 4;
+  color: #FFF4D1;
+  line-height: 140%;
+  font-size: 20px;
+  padding: 0 5px 0 0;
+  font-weight: 500;
+}
+.cocktails__item div .overlay-likes img {
+  position: relative;
+  z-index: 5;
+  width: 20px;
+  height: 20px;
+}
+.cocktails__item span {
+  padding: 8px 0 0 20px;
+  color: #FEECAC;
+  font-weight: 500;
+  font-size: 24px;
+}
+.cocktails__item a {
+  position: relative;
+  padding: 10px 0 10px 20px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  color: #FFB36A;
+  font-size: 20px;
+}
+.cocktails__item a::after {
+  content: ">";
+  position: absolute;
+  height: 0;
+  margin-left: 10px;
+  background-color: #FFB36A;
+}
+.cocktails__item:last-of-type {
+  margin: 0;
+}
+
+.instruction {
+  position: relative;
+  z-index: 4;
+  margin: 90px 80px 0 80px;
+  border: 3px solid #FFF4D1;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #542900 0%, #423C2D 43%, #181818 100%);
+  display: flex;
+}
+.instruction__imgs {
+  padding: 55px 0 55px 70px;
+}
+.instruction__imgs div {
+  position: relative;
+}
+.instruction__imgs div img {
+  position: relative;
+}
+.instruction__imgs div img:last-of-type {
+  margin: 38% -22% 0 -22%;
+}
+.instruction__content {
+  padding: 54px 100px;
+}
+.instruction__content button {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 20px;
+  opacity: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #FEECAC;
+  margin-right: 20px;
+}
+.instruction__title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #FFF4D1;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  padding-bottom: 30px;
+}
+.instruction__items li {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFDF6;
+  position: relative;
+  margin-left: 16px;
+  margin-bottom: 9px;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+}
+.instruction__items li::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: -12px;
+  top: 10px;
+}
+.instruction__items li:last-child {
+  margin-bottom: 43px;
+}
+
+.season {
+  position: relative;
+  margin: 120px 80px 0 80px;
+}
+.season__title {
+  color: #FFF4D1;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.season__cocktails {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+.season__cocktails div {
+  margin-right: 25px;
+}
+.season__cocktails div .image-container {
+  position: relative;
+  background: linear-gradient(135deg, #FEECAC 0%, #FFC995 43%, #FFB36A 100%);
+  border-radius: 38px 0 38px 0;
+}
+.season__cocktails div .image-container img {
+  position: relative;
+  display: block;
+  border-radius: 48px 0 48px 0;
+}
+.season__cocktails div .image-container div {
+  position: absolute;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.season__cocktails div .image-container div span {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FEECAC;
+  border: 1px solid #FEECAC;
+  padding: 10px;
+  border-radius: 10px;
+}
+.season__cocktails div .image-container div div {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 10%;
+}
+.season__cocktails div .image-container div div a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FEECAC;
+  font-weight: 500;
+  font-size: 24px;
+}
+.season__cocktails div .image-container div div img {
+  width: 20px;
+  height: 20px;
+}
+
+.with-us {
+  position: relative;
+  margin: 100px 80px 100px 80px;
+}
+.with-us__title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #FFF4D1;
+}
+.with-us__items {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.with-us__item {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 295px;
+  background-image: linear-gradient(to bottom, #542900 0%, #423C2D 56%, #181818 100%);
+  border-radius: 20px;
+  padding: 48px 18px;
+}
+.with-us__item img {
+  margin-bottom: 13px;
+}
+.with-us__item div {
+  color: #FFF5EC;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 140%;
+}/*# sourceMappingURL=main.css.map */

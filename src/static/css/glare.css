@@ -1,0 +1,15 @@
+.blur-circle {
+  background: radial-gradient(circle, rgba(254, 236, 172, 0.4) 0%, rgba(254, 236, 172, 0.4) 50%, rgba(254, 236, 172, 0.4) 50%, rgba(254, 236, 172, 0.4) 100%);
+  border-radius: 50%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 1;
+}
+
+.blur-white-circle {
+  background: #d7cfc9;
+  border-radius: 50%;
+  filter: blur(30px);
+  position: absolute;
+  z-index: 2;
+}/*# sourceMappingURL=glare.css.map */
